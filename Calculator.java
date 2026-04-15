@@ -31,8 +31,8 @@ public class Calculator {
             System.out.println("3. Multiplication");
             System.out.println("4. Division");
             System.out.println("5. Power");
-            System.out.println("7. Use Previous Result");
-            System.out.println("8. Exit");
+            System.out.println("6. Use Previous Result");
+            System.out.println("7. Exit");
             System.out.print("Enter your choice: ");
 
             while (!scanner.hasNextInt()) {
@@ -42,7 +42,7 @@ public class Calculator {
 
             choice = scanner.nextInt();
 
-            if(choice >=1 && choice <= 6) {
+            if(choice >=1 && choice <= 5) {
                 System.out.println("Enter first number: ");
                 number1 = scanner.nextDouble();
 
@@ -77,12 +77,12 @@ public class Calculator {
                 } catch (ArithmeticException e) {
                     System.out.println("Error: " + e.getMessage());
                 }
-            } else if (choice == 7) {
+            } else if (choice == 6) {
                 System.out.println("Previous Result: " + lastResult);
-            } else if (choice != 8) {
+            } else if (choice != 7) {
                 System.out.println("Invalid choice! Try again.");
             }
-        } while (choice != 8);
+        } while (choice != 7);
 
         System.out.println("Calculator exited!");
         scanner.close();
